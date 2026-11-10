@@ -6,32 +6,46 @@
 <title>VisPro Soft — ISO ve EHS Yönetim Sistemi</title>
 <meta name="description" content="VisPro Soft: denetim, uygunsuzluk, düzeltici faaliyet, risk ve aksiyon takibini tek masaüstü programda toplayan ISO / EHS yönetim sistemi. 15 gün ücretsiz deneyin.">
 <style>
-:root{--bg:#fff;--bg2:#F1F5F9;--ink:#0F172A;--mute:#475569;--line:#E2E8F0;--brand:#1E40AF;--brand2:#2563EB;--card:#fff}
-@media (prefers-color-scheme:dark){:root{--bg:#0B1220;--bg2:#111A2E;--ink:#E8EEF9;--mute:#9BA9C2;--line:#22304D;--brand:#60A5FA;--brand2:#3B82F6;--card:#0F1830}}
+:root{--bg:#FBFAF7;--bg2:#F1EEE6;--ink:#0B1634;--mute:#4A5575;--line:#E0DBCC;--brand:#213F9A;--brand2:#2B4DB5;--card:#fff;--gold:#D9B84A;--gold-ink:#8F6D10;--night:#0B1634;--night2:#16307A}
+@media (prefers-color-scheme:dark){:root{--bg:#070E24;--bg2:#0B1631;--ink:#EAF0FF;--mute:#A3B1D6;--line:#1E2E5C;--brand:#8FA8F5;--brand2:#3F63D8;--card:#0E1B40;--gold:#E0C060;--gold-ink:#E0C060;--night:#050B1E;--night2:#10286B}}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
 nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none}.logo b{color:var(--brand2)}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none}.logo b{color:var(--gold-ink)}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
 nav ul a{text-decoration:none;color:var(--mute)}nav ul a:hover{color:var(--ink)}
 .btn{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--brand2);color:#fff;font-weight:600;text-decoration:none;border:1px solid transparent}
 .btn.alt{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn:hover{filter:brightness(1.08)}
-.hero{padding:84px 0 64px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.hero{padding:84px 0 72px;color:#fff;position:relative;overflow:hidden;
+  background:
+   radial-gradient(circle at 84% 16%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   radial-gradient(circle at 92% 62%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   radial-gradient(circle at 76% 40%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   radial-gradient(circle at 73% 64%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   radial-gradient(circle at 88% 30%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   radial-gradient(circle at 70% 88%,rgba(224,192,96,.95) 0 2px,transparent 3px),
+   linear-gradient(115deg,transparent 58%,rgba(255,255,255,.05) 58.2%,transparent 59.5%),
+   linear-gradient(135deg,var(--night) 0%,var(--night2) 62%,#2447A8 100%)}
+.hero h1{color:#fff}
+.hero p{color:#C7D3F3}
+.hero .note{color:#9FB2E6}
+.hero .btn{background:var(--gold);color:#0B1634}
+.hero .btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.38)}
 .hero h1{font-size:clamp(32px,5.5vw,56px);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;max-width:780px}
-.hero p{font-size:19px;color:var(--mute);max-width:640px;margin:0 0 30px}
+.hero p{font-size:19px;max-width:640px;margin:0 0 30px}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .note{font-size:14px;color:var(--mute);margin-top:14px}
 section{padding:64px 0}section.alt{background:var(--bg2)}
 h2{font-size:clamp(26px,3.5vw,36px);letter-spacing:-.02em;margin:0 0 10px}
 .lead{color:var(--mute);max-width:640px;margin:0 0 36px}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;border-top:3px solid var(--brand2)}
 .card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--mute);font-size:15px}
-.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--gold-ink);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
 .steps{counter-reset:s;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .steps div{counter-increment:s;padding-left:46px;position:relative}
 .steps div:before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--brand2);color:#fff;font-weight:700;display:grid;place-items:center}
@@ -41,7 +55,7 @@ form{display:grid;gap:12px}
 input,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
 textarea{min-height:110px;resize:vertical}
 button.btn{cursor:pointer;font:inherit;font-weight:600}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:14px}
+footer{background:var(--night);border-top:2px solid var(--gold);padding:28px 0;color:#9FB2E6;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:700px){nav ul{display:none}.hero{padding:56px 0 44px}}
 </style>
@@ -49,14 +63,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <body>
 <header><div class="wrap"><nav>
   <a class="logo" href="#">Vis<b>Pro</b>Soft</a>
-  <ul><li><a href="#moduller">Modüller</a></li><li><a href="#nasil">Nasıl çalışır</a></li><li><a href="#iletisim">İletişim</a></li></ul>
+  <ul><li><a href="#moduller">Ürünler</a></li><li><a href="#nasil">Nasıl çalışır</a></li><li><a href="#iletisim">İletişim</a></li></ul>
   <a class="btn" href="https://github.com/sinanmaya/visprosoft/releases/download/v1.0.0/VisioPRO_Shield_Kurulum_v1.0.0.exe" download>Demoyu indir</a>
 </nav></div></header>
 
 <main>
 <div class="hero"><div class="wrap">
-  <h1>ISO ve EHS süreçlerinizi tek programdan yönetin.</h1>
-  <p>Denetim planlama, uygunsuzluk, düzeltici faaliyet, risk ve aksiyon takibi ile raporlama. Excel dosyaları ve dağınık klasörler yerine düzenli, izlenebilir bir sistem.</p>
+  <h1>Her bulgu, kapanana kadar takipte.</h1>
+  <p>Denetimde çıkan bulgu uygunsuzluğa, oradan düzeltici faaliyete ve etkinlik kontrolüne kendiliğinden bağlanır. Excel'de kaybolan aksiyon, unutulan termin, eksik kayıt kalmaz. ISO ve EHS süreçleriniz tek programda, denetime hazır.</p>
   <div class="cta"><a class="btn" href="https://github.com/sinanmaya/visprosoft/releases/download/v1.0.0/VisioPRO_Shield_Kurulum_v1.0.0.exe" download>Demoyu indir</a><a class="btn alt" href="#iletisim">Bizimle görüşün</a></div>
   <div class="note">Windows masaüstü programı. Verileriniz kendi bilgisayarınızda kalır.</div>
 </div></div>
